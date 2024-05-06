@@ -14,9 +14,7 @@ class RemoteService {
   Future<Either<String, NetworkResult<List<Products>>>> getProducts(
       int page) async {
     try {
-      print("getProducts page => $page");
       final response = await _dio.get('/products?limit=10&skip=$page');
-      print("response => $response");
       final resData = response.data as Map<String, dynamic>;
       if (response.statusCode == 200) {
         var data = resData['products'] as List<dynamic>;

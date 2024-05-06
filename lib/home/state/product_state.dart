@@ -21,7 +21,6 @@ class ProductStateNotifier extends StateNotifier<ProductState> {
       : super(const ProductState.initial([]));
 
   Future<void> getProductsFirstPage(int page) async {
-    print('getProductsFirstPage $page');
     state = const ProductState.initial([]);
     await getProducts(page);
   }
