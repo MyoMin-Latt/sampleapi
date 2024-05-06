@@ -11,20 +11,27 @@ class RemoteService {
   final Dio _dio;
   RemoteService(this._dio);
 
-  Future<Either<String, List<Products>>> getProducts(int page) async {
+  Future<Either<String, NetworkResult<List<Products>>>> getProducts(
+      int page) async {
     try {
-      final response = await _dio.get('/products?limit=3&skip=$page');
+      print("getProducts page => $page");
+      final response = await _dio.get('/products?limit=10&skip=$page');
       print("response => $response");
       final resData = response.data as Map<String, dynamic>;
       if (response.statusCode == 200) {
         var data = resData['products'] as List<dynamic>;
         var jsonData = data.map((e) => Products.fromJson(e)).toList();
-        return right(jsonData);
+        return right(NetworkResult.result(jsonData));
       } else {
         return left(response.statusMessage ?? '');
       }
     } on DioException catch (e) {
-      return left(e.message ?? '');
+      if (e.type == DioExceptionType.connectionError ||
+          e.type == DioExceptionType.unknown) {
+        return right(const NetworkResult.noConnection());
+      } else {
+        return left(e.message ?? '');
+      }
     }
   }
 }

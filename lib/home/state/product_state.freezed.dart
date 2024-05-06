@@ -22,6 +22,7 @@ mixin _$ProductState {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) =>
@@ -31,6 +32,7 @@ mixin _$ProductState {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) =>
@@ -40,6 +42,7 @@ mixin _$ProductState {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -50,6 +53,7 @@ mixin _$ProductState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) =>
@@ -59,6 +63,7 @@ mixin _$ProductState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) =>
@@ -68,6 +73,7 @@ mixin _$ProductState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -187,6 +193,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) {
@@ -199,6 +206,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) {
@@ -211,6 +219,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -227,6 +236,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -239,6 +249,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -251,6 +262,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -348,6 +360,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) {
@@ -360,6 +373,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) {
@@ -372,6 +386,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -388,6 +403,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -400,6 +416,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -412,6 +429,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -509,6 +527,7 @@ class _$EmptyImpl implements _Empty {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) {
@@ -521,6 +540,7 @@ class _$EmptyImpl implements _Empty {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) {
@@ -533,6 +553,7 @@ class _$EmptyImpl implements _Empty {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -549,6 +570,7 @@ class _$EmptyImpl implements _Empty {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -561,6 +583,7 @@ class _$EmptyImpl implements _Empty {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -573,6 +596,7 @@ class _$EmptyImpl implements _Empty {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -592,6 +616,173 @@ abstract class _Empty implements ProductState {
   @override
   @JsonKey(ignore: true)
   _$$EmptyImplCopyWith<_$EmptyImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NoInternetImplCopyWith<$Res>
+    implements $ProductStateCopyWith<$Res> {
+  factory _$$NoInternetImplCopyWith(
+          _$NoInternetImpl value, $Res Function(_$NoInternetImpl) then) =
+      __$$NoInternetImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<Products> data});
+}
+
+/// @nodoc
+class __$$NoInternetImplCopyWithImpl<$Res>
+    extends _$ProductStateCopyWithImpl<$Res, _$NoInternetImpl>
+    implements _$$NoInternetImplCopyWith<$Res> {
+  __$$NoInternetImplCopyWithImpl(
+      _$NoInternetImpl _value, $Res Function(_$NoInternetImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$NoInternetImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Products>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NoInternetImpl implements _NoInternet {
+  const _$NoInternetImpl(final List<Products> data) : _data = data;
+
+  final List<Products> _data;
+  @override
+  List<Products> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'ProductState.noInternet(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoInternetImpl &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NoInternetImplCopyWith<_$NoInternetImpl> get copyWith =>
+      __$$NoInternetImplCopyWithImpl<_$NoInternetImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Products> data) initial,
+    required TResult Function(List<Products> data) loading,
+    required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
+    required TResult Function(List<Products> data) success,
+    required TResult Function(String message, List<Products> data) error,
+  }) {
+    return noInternet(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Products> data)? initial,
+    TResult? Function(List<Products> data)? loading,
+    TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
+    TResult? Function(List<Products> data)? success,
+    TResult? Function(String message, List<Products> data)? error,
+  }) {
+    return noInternet?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Products> data)? initial,
+    TResult Function(List<Products> data)? loading,
+    TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
+    TResult Function(List<Products> data)? success,
+    TResult Function(String message, List<Products> data)? error,
+    required TResult orElse(),
+  }) {
+    if (noInternet != null) {
+      return noInternet(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return noInternet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return noInternet?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (noInternet != null) {
+      return noInternet(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoInternet implements ProductState {
+  const factory _NoInternet(final List<Products> data) = _$NoInternetImpl;
+
+  @override
+  List<Products> get data;
+  @override
+  @JsonKey(ignore: true)
+  _$$NoInternetImplCopyWith<_$NoInternetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -670,6 +861,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) {
@@ -682,6 +874,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) {
@@ -694,6 +887,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -710,6 +904,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -722,6 +917,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -734,6 +930,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -839,6 +1036,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(List<Products> data) initial,
     required TResult Function(List<Products> data) loading,
     required TResult Function(List<Products> data) empty,
+    required TResult Function(List<Products> data) noInternet,
     required TResult Function(List<Products> data) success,
     required TResult Function(String message, List<Products> data) error,
   }) {
@@ -851,6 +1049,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(List<Products> data)? initial,
     TResult? Function(List<Products> data)? loading,
     TResult? Function(List<Products> data)? empty,
+    TResult? Function(List<Products> data)? noInternet,
     TResult? Function(List<Products> data)? success,
     TResult? Function(String message, List<Products> data)? error,
   }) {
@@ -863,6 +1062,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(List<Products> data)? initial,
     TResult Function(List<Products> data)? loading,
     TResult Function(List<Products> data)? empty,
+    TResult Function(List<Products> data)? noInternet,
     TResult Function(List<Products> data)? success,
     TResult Function(String message, List<Products> data)? error,
     required TResult orElse(),
@@ -879,6 +1079,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -891,6 +1092,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternet value)? noInternet,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -903,6 +1105,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
