@@ -48,15 +48,29 @@ class _ProductPageState extends ConsumerState<ProductPage> {
       body: RefreshIndicator(
         onRefresh: () => ref.refresh(getProductProvider.future),
         child: state.when(
-          data: (data) => ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) => Card(
-                      child: ListTile(
-                    title: Padding(
-                      padding: const EdgeInsets.all(28.0),
-                      child: Text('$index / ${data.title}'),
-                    ),
-                  ))),
+          data: (data) => Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Card(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Image.network(
+                    data.thumbnail,
+                    fit: BoxFit.cover,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("${data.id}, ${data.title}"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(data.description),
+                  ),
+                ],
+              ),
+            ),
+          ),
           error: (e, t) => Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
