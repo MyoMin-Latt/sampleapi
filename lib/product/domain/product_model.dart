@@ -78,8 +78,11 @@ class ProductModel {
       title: map['title'] as String,
       description: map['description'] as String,
       price: map['price'] as int,
-      discountPercentage: map['discountPercentage'] as double,
-      rating: map['rating'] as double,
+      discountPercentage:
+          int.tryParse(map['discountPercentage'].toString())?.toDouble() ??
+              map['discountPercentage'] as double,
+      rating: int.tryParse(map['rating'].toString())?.toDouble() ??
+          map['rating'] as double,
       stock: map['stock'] as int,
       brand: map['brand'] as String,
       category: map['category'] as String,

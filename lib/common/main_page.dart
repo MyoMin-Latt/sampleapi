@@ -29,6 +29,13 @@ class MainPage extends StatelessWidget {
               },
               child: const Text('Get One Product'),
             ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ProductListPage()));
+              },
+              child: const Text('Get Product List'),
+            ),
           ],
         ),
       ),

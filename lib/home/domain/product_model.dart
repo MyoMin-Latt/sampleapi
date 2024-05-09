@@ -64,7 +64,7 @@ class Products {
     discountPercentage =
         int.tryParse(json['discountPercentage'].toString())?.toDouble() ??
             json['discountPercentage'];
-    rating =
+    rating = 
         int.tryParse(json['rating'].toString())?.toDouble() ?? json['rating'];
     stock = json['stock'];
     brand = json['brand'];
