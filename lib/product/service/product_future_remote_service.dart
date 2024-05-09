@@ -40,7 +40,13 @@ final getProductListProvider =
   Future<List<ProductModel>> getProducts =
       getProductList(dio, ref.watch(skipNumberProvider));
 
-  getProducts.then((value) => ref.read(productListProvider).addAll(value));
+  getProducts.then((value) {
+    if (value.isNotEmpty) {
+      ref.read(productListProvider).addAll(value);
+    } else {
+      ref.read(isNoMoreProvider.notifier).state = true;
+    }
+  });
   return getProducts;
 });
 
@@ -64,6 +70,10 @@ Future<List<ProductModel>> getProductList(Dio dio, int skipNumber) async {
     }
   }
 }
+
+final isNoMoreProvider = StateProvider.autoDispose<bool>((ref) {
+  return false;
+});
 
 class ProductListNotifier extends Notifier<List<ProductModel>> {
   @override
