@@ -92,16 +92,22 @@ class _ProductListPageState extends ConsumerState<ProductListPage> {
         itemBuilder: (context, index) {
           if (index < productList.length) {
             var product = productList[index];
-            return Card(
-              child: ListTile(
-                leading: Image.network(
-                  product.thumbnail,
-                  fit: BoxFit.cover,
-                  height: 100,
-                  width: 100,
+            return InkWell(
+              onLongPress: () {
+                ref.read(productListProvider).removeAt(index);
+                setState(() {});
+              },
+              child: Card(
+                child: ListTile(
+                  leading: Image.network(
+                    product.thumbnail,
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 100,
+                  ),
+                  title: Text("${product.id}, ${product.title}"),
+                  subtitle: Text(product.description),
                 ),
-                title: Text("${product.id}, ${product.title}"),
-                subtitle: Text(product.description),
               ),
             );
           } else {

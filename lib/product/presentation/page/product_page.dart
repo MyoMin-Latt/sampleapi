@@ -20,6 +20,12 @@ class _ProductPageState extends ConsumerState<ProductPage> {
     // print('getProductProvider.hasError => ${state.hasError}');
     // print('getProductProvider.hasValue => ${state.hasValue}');
     // print('getProductProvider -------------------------------------');
+    print('state.isLoading => ${state.isLoading}');
+    print('state.isReloading => ${state.isReloading}');
+    print('state.isRefreshing => ${state.isRefreshing}');
+    print('state.hasError => ${state.hasError}');
+    print('state.hasValue => ${state.hasValue}');
+    print('state.valueOrNull => ${state.valueOrNull}');
 
     return Scaffold(
       appBar: AppBar(
@@ -71,20 +77,22 @@ class _ProductPageState extends ConsumerState<ProductPage> {
               ),
             ),
           ),
-          error: (e, t) => Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(e.toString()),
-                IconButton(
-                  onPressed: () => !state.isLoading
-                      ? ref.refresh(getProductProvider.future)
-                      : null,
-                  icon: const Icon(Icons.refresh),
+          error: (e, t) => state.isLoading
+              ? const Center(child: CircularProgressIndicator())
+              : Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(e.toString()),
+                      IconButton(
+                        onPressed: () => !state.isLoading
+                            ? ref.refresh(getProductProvider.future)
+                            : null,
+                        icon: const Icon(Icons.refresh),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
-          ),
           loading: () => const Center(child: CircularProgressIndicator()),
         ),
       ),
