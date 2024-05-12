@@ -39,6 +39,9 @@ final getProductListProvider =
   // final skipNumber = ref.read(skipNumberProvider.notifier);
   Future<List<ProductModel>> getProducts =
       getProductList(dio, ref.watch(skipNumberProvider));
+  if (ref.watch(skipNumberProvider) == 0) {
+    ref.read(productListProvider).clear();
+  }
 
   getProducts.then((value) {
     if (value.isNotEmpty) {
