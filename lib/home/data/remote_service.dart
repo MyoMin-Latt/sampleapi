@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sampleapi/home/feat_home.dart';
 
-import '../../common/common.dart';
+import '../../shared/shared.dart';
 
 class RemoteService {
   final Dio _dio;

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sampleapi/common/common.dart';
+import 'package:sampleapi/shared/shared.dart';
 import 'package:sampleapi/product/feat_product.dart';
 
 final getProductProvider =

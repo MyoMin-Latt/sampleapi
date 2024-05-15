@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sampleapi/home/feat_home.dart';
 
 import '../product/feat_product.dart';
+import '../student/student.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -35,6 +36,24 @@ class MainPage extends StatelessWidget {
                     builder: (context) => const ProductListPage()));
               },
               child: const Text('Get Product List'),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(18.0),
+              child: Text('Student'),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const RegisterPage()));
+              },
+              child: const Text('Register'),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
+              },
+              child: const Text('Login'),
             ),
           ],
         ),
